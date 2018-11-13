@@ -10,7 +10,22 @@
   function showModal(e) {
     e.preventDefault();
     var target = event.target;
-    var closestLink = target.closest(".list-item__link");
+    var closestLink;
+
+    // polifill for ie
+    if (window.Element && !Element.prototype.closest) {
+      Element.prototype.closest = function(s) {
+        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+          i,
+          el = this;
+        do {
+          i = matches.length;
+          while (--i >= 0 && matches.item(i) !== el) {}
+        } while (i < 0 && (el = el.parentElement));
+        return el;
+      };
+    }
+    closestLink = target.closest(".list-item__link");
 
     if (target && closestLink) {
       var modal = document.querySelector(".modal");

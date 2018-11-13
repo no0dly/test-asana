@@ -20,6 +20,6 @@
 
     li.classList.add("list-item");
     li.innerHTML = markup;
-    list.append(li);
+    list.appendChild(li);
   });
 })();
