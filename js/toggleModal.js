@@ -9,7 +9,7 @@
   // show modal function
   function showModal(e) {
     e.preventDefault();
-    var target = event.target;
+    var target = e.target;
     var closestLink;
 
     // polifill for ie
