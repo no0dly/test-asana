@@ -98,8 +98,8 @@
   width: 32px;
 }
 
-.modal-close::after,
-.modal-close::before {
+.modal-close:after,
+.modal-close:before {
   background-color: #fff;
   content: "";
   display: block;
@@ -112,12 +112,12 @@
   transform-origin: center center;
 }
 
-.modal-close::before {
+.modal-close:before {
   height: 2px;
   width: 50%;
 }
 
-.modal-close::after {
+.modal-close:after {
   height: 50%;
   width: 2px;
 }

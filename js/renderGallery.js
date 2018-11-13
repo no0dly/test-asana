@@ -17,7 +17,7 @@
       "</div>" +
       "</div>" +
       "</a>";
-    // var html =
+
     li.classList.add("list-item");
     li.innerHTML = markup;
     list.append(li);
